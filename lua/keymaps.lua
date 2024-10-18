@@ -1,6 +1,16 @@
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+-- Use 'jk' to Esc
+vim.keymap.set('n', 'jk', '<Esc>')
+
+-- Shortcut to Quit
+vim.keymap.set('n', '<leader>q', '<cmd>q<cr>')
+
+-- Shortcut to Save
+vim.keymap.set('n', '<leader>fs', '<cmd>w<cr>')
+vim.keymap.set('n', '<C-s>', '<cmd>w<cr>')
+
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -46,3 +56,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- vim: ts=2 sts=2 sw=2 et
+
+-- === Navigate Buffers ===
+-- Next Buffer
+vim.keymap.set('n', '<leader>bn', '<cmd>bnext<cr>', { desc = 'Next Buffer' })
+
+-- Previous Buffer
+vim.keymap.set('n', '<leader>bp', '<cmd>bprevious<cr>', { desc = 'Previous Buffer' })

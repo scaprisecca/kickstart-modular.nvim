@@ -100,6 +100,7 @@ require 'options'
 require 'keymaps'
 
 -- [[ Install `lazy.nvim` plugin manager ]]
+--        { '<leader>w', group = '[W]orkspace' },
 require 'lazy-bootstrap'
 
 -- [[ Configure and install plugins ]]
